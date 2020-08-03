@@ -30,12 +30,15 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
 
-      {characters.map((char, index) => {
+      {characters.map((character, index) => {
         return (
           <Character 
-          name={char.name}
-          gender={char.gender}
+          name={character.name}
+          gender={character.gender}
           key={index}
+          birthYear={character.birth_year}
+          height={character.height}
+          hair={character.hair_color}
       />
     )})
   }
