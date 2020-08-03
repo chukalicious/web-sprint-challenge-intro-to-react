@@ -40,12 +40,11 @@ const Character = (props) => {
             <div>
                 <h3>Films</h3>
                 {console.log(props.films)}
-                {props.films.map((film) => {
+                {props.films.map((film, index) => {
                     return (
-                        <Films films={props.films}/> 
+                        <Films films={film} key={index}/> 
                     )
                 })}
-                
             </div>
 
         </CharacterCard>
