@@ -22,17 +22,13 @@ const Films = (props)=> {
 // console.log(props.films)
 
 const [title, setTitle] = useState(props.films)
-console.log(title)
 const [episode, setEpisode] = useState(props.films)
-console.log(episode)
-
+const [releaseDate, setReleaseDate] = useState(props.films)
 
 useEffect(() => {
     axios.get(title)
     .then((response) => {
-        /* console.log(response.data.title) */
         setTitle(response.data.title)
-        /* console.log(setApi()) */
     })
     .catch(err => console.log(err))
 }, [])
@@ -40,8 +36,15 @@ useEffect(() => {
 useEffect(() => {
     axios.get(episode)
     .then((response) => {
-        console.log(response.data.episode_id)
         setEpisode(response.data.episode_id)
+    })
+    .catch(err => console.log(err))
+}, [])
+
+useEffect(() => {
+    axios.get(releaseDate)
+    .then((response) => {
+        setReleaseDate(response.data.release_date)
     })
     .catch(err => console.log(err))
 }, [])
@@ -54,7 +57,7 @@ useEffect(() => {
             <FilmsDiv>
             <Line>Title: {title}</Line>
             <Line>Episode: {episode}</Line>
-            <Line>Release date: {props.films}</Line>
+            <Line>Release date: {releaseDate}</Line>
             </FilmsDiv>
             
         </div>
