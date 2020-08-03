@@ -3,7 +3,7 @@
 
 import React from "react"
 import Films from "./Films"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 
 const CharacterCard = styled.div`
