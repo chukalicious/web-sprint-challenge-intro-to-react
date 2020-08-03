@@ -30,17 +30,17 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
 
-      {characters.map((char) => {
+      {characters.map((char, index) => {
         return (
           <Character 
-      name={char.name}
-      gender={char.gender}
-      /> 
-    )}
-  )
-}
+          name={char.name}
+          gender={char.gender}
+          key={index}
+      />
+    )})
+  }
 
-</div>
-  )}
+    </div>
+)}
 
 export default App;
