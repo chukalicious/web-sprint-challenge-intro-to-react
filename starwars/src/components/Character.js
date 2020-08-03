@@ -19,10 +19,11 @@ const Name = styled.h2`
     background-color: #ECDFD2;
     text-align: left; 
     margin: -.5rem -.5rem; 
-    padding: .5rem 1rem 1rem 0rem;  
-
+    padding: .5rem 1rem;  
 `
-
+const Arrow = styled.p`
+    margin: -1rem 0 0 0 ; 
+`
 const Line = styled.p`
     margin: .2rem; 
     padding-top: 1rem; 
@@ -43,6 +44,7 @@ const Character = (props) => {
 
             <div>
                 <h3>Films</h3>
+                <Arrow>⬇️</Arrow>
                 <Films /> 
             </div>
 

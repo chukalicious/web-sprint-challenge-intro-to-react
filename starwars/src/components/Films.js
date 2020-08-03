@@ -1,9 +1,6 @@
-
-
 import React from "react"
 
-
-const Films = ()=> {
+const Films = (props)=> {
 
     return (
         <div>
