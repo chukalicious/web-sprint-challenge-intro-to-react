@@ -1,10 +1,7 @@
 // Write your Character component here
-
-
 import React from "react"
 import Films from "./Films"
 import styled from "styled-components"
-
 
 const CharacterCard = styled.div`
     display: flex; 
@@ -21,16 +18,14 @@ const Name = styled.h2`
     margin: -.5rem -.5rem; 
     padding: .5rem 1rem;  
 `
-const Arrow = styled.p`
-    margin: -1rem 0 0 0 ; 
-`
+
 const Line = styled.p`
     margin: .2rem; 
     padding-top: 1rem; 
 `
 
 const Character = (props) => {
-
+    
     return(
 
         <CharacterCard>
@@ -44,8 +39,13 @@ const Character = (props) => {
 
             <div>
                 <h3>Films</h3>
-                <Arrow>⬇️</Arrow>
-                <Films /> 
+                {console.log(props.films)}
+                {props.films.map((film) => {
+                    return (
+                        <Films films={props.films}/> 
+                    )
+                })}
+                
             </div>
 
         </CharacterCard>
@@ -53,3 +53,4 @@ const Character = (props) => {
 }
 
 export default Character
+export { Line }

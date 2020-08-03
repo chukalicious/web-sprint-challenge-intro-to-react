@@ -12,8 +12,8 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  const [characters, setCharacters] = useState([]); 
-  console.log(characters)
+  const [characters, setCharacters] = useState([]);
+  /* characters.map(title => console.log(title.films)) */
 
   useEffect(() => {
     axios.get("https://swapi.dev/api/people/")
@@ -23,7 +23,6 @@ const App = () => {
     })
     .catch(error => console.log(error)) 
   }, [])
-
     
   return (
 
@@ -39,8 +38,7 @@ const App = () => {
           birthYear={character.birth_year}
           height={character.height}
           hair={character.hair_color}
-          
-
+          films={character.films}
       />
     )})
   }
