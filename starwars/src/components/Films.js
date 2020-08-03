@@ -21,15 +21,27 @@ const FilmsDiv = styled.div`
 const Films = (props)=> {
 // console.log(props.films)
 
-const [api, setApi] = useState(props.films)
-console.log(api)
+const [title, setTitle] = useState(props.films)
+console.log(title)
+const [episode, setEpisode] = useState(props.films)
+console.log(episode)
+
 
 useEffect(() => {
-    axios.get(api)
+    axios.get(title)
     .then((response) => {
         /* console.log(response.data.title) */
-        setApi(response.data.title)
+        setTitle(response.data.title)
         /* console.log(setApi()) */
+    })
+    .catch(err => console.log(err))
+}, [])
+
+useEffect(() => {
+    axios.get(episode)
+    .then((response) => {
+        console.log(response.data.episode_id)
+        setEpisode(response.data.episode_id)
     })
     .catch(err => console.log(err))
 }, [])
@@ -40,8 +52,8 @@ useEffect(() => {
     return (
         <div>
             <FilmsDiv>
-            <Line>Title: {api}</Line>
-            <Line>Episode: {props.films}</Line>
+            <Line>Title: {title}</Line>
+            <Line>Episode: {episode}</Line>
             <Line>Release date: {props.films}</Line>
             </FilmsDiv>
             
