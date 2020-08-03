@@ -7,7 +7,17 @@ const Character = (props) => {
 
     return(
 
-        <div>Character info goes here</div>
+        <div>
+            <h2>{props.name}</h2>
+            <p>Bio Fact</p>
+            <p>Bio Fact</p>
+            <p>Bio Fact</p>
+            <p>Bio Fact</p>
+            <p>Bio Fact</p>
+            <p>Bio Fact</p>
+
+
+        </div>
     )
 }
 
