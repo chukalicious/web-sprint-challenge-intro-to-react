@@ -2,12 +2,19 @@
 
 
 import React from "react"
+import Films from "./Films"
+import styled from 'styled-components'
 
+
+const CharacterCard = styled.div`
+    display: flex; 
+    flex-direction: column; 
+`
 const Character = (props) => {
 
     return(
 
-        <div>
+        <CharacterCard>
             <h2>{props.name}</h2>
             <p>Gender: {props.gender.toUpperCase()}</p>
             <p>Birth Year: {props.birthYear}</p>
@@ -16,8 +23,12 @@ const Character = (props) => {
             {/* <p>{Bio Fact}</p> */}
             {/* <p>{Bio Fact}</p> */}
 
+            <div>
+                <h3>Films</h3>
+                <Films /> 
+            </div>
 
-        </div>
+        </CharacterCard>
     )
 }
 

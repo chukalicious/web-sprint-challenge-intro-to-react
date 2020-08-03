@@ -13,6 +13,7 @@ const App = () => {
   // sync up with, if any.
 
   const [characters, setCharacters] = useState([]); 
+  console.log(characters)
 
   useEffect(() => {
     axios.get('https://swapi.dev/api/people/')
@@ -23,22 +24,24 @@ const App = () => {
     .catch(error => console.log(error)) 
   }, [])
 
-    {console.log(characters)}
+    
   return (
 
     
     <div className="App">
       <h1 className="Header">Characters</h1>
 
-      {characters.map((character, index) => {
+      {characters.map((character) => {
         return (
           <Character 
           name={character.name}
           gender={character.gender}
-          key={index}
+          key={character.url}
           birthYear={character.birth_year}
           height={character.height}
           hair={character.hair_color}
+          
+
       />
     )})
   }
