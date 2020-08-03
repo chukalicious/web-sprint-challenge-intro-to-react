@@ -10,16 +10,21 @@ const CharacterCard = styled.div`
     display: flex; 
     flex-direction: column; 
 `
+
+const Line = styled.p`
+    margin: .2rem; 
+`
+
 const Character = (props) => {
 
     return(
 
         <CharacterCard>
             <h2>{props.name}</h2>
-            <p>Gender: {props.gender.toUpperCase()}</p>
-            <p>Birth Year: {props.birthYear}</p>
-            <p>Height: {props.height}</p>
-            <p>Hair Color: {props.hair.toUpperCase()}</p>
+            <Line>Gender: {props.gender.toUpperCase()}</Line>
+            <Line>Birth Year: {props.birthYear}</Line>
+            <Line>Height: {props.height}</Line>
+            <Line>Hair Color: {props.hair.toUpperCase()}</Line>
             {/* <p>{Bio Fact}</p> */}
             {/* <p>{Bio Fact}</p> */}
 
