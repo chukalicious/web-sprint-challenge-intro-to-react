@@ -21,7 +21,7 @@ const Films = (props)=> {
 
 // console.log(props.films)
 //props.films is where the urls for the movies are
-    {console.log(props)}
+    // {console.log(props)}
     return (
         <div>
             <FilmsDiv>
