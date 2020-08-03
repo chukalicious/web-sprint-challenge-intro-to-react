@@ -46,7 +46,7 @@ const Character = (props) => {
 
             <div>
                 <h3>Films</h3>
-                {console.log(props.films)}
+                {/* {console.log(props.films)} */}
                 
                 {props.films.map((film, index) => {
                     return (
