@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import axios from 'axios'
+import Character from "./components/Character"
 
 import './App.css';
 
@@ -28,8 +29,18 @@ const App = () => {
     
     <div className="App">
       <h1 className="Header">Characters</h1>
-    </div>
-  );
+
+      {characters.map((char) => {
+        return (
+          <Character 
+      name={char.name}
+      gender={char.gender}
+      /> 
+    )}
+  )
 }
+
+</div>
+  )}
 
 export default App;
