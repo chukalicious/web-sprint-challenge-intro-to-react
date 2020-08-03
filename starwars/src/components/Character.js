@@ -27,15 +27,15 @@ const Line = styled.p`
 
 const Character = (props) => {
 
-    const [movies, setMovies] = useState([])]
+    /* const [movies, setMovies] = useState([])
     useEffect(() => {
         axios.get({movies})//"http://swapi.dev/api/films/1/"
         .then((res) => {
             console.log(res.data)
         })
         .catch(err => console.log(err))
-    }, [])
-    
+    }, []) */
+    const [movies, setMovies] = useState([])
     return(
 
         <CharacterCard>
@@ -44,8 +44,6 @@ const Character = (props) => {
             <Line>Birth Year: {props.birthYear}</Line>
             <Line>Height: {props.height}</Line>
             <Line>Hair Color: {props.hair.toUpperCase()}</Line>
-            {/* <p>{Bio Fact}</p> */}
-            {/* <p>{Bio Fact}</p> */}
 
             <div>
                 <h3>Films</h3>
