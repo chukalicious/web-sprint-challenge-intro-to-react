@@ -35,7 +35,6 @@ const Character = (props) => {
         })
         .catch(err => console.log(err))
     }, []) */
-    const [movies, setMovies] = useState([])
     return(
 
         <CharacterCard>

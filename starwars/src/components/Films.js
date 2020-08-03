@@ -18,6 +18,7 @@ const FilmsDiv = styled.div`
 `
 
 const Films = (props)=> {
+    
 
 // console.log(props.films)
 //props.films is where the urls for the movies are
