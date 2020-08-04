@@ -39,6 +39,7 @@ const App = () => {
           height={character.height}
           hair={character.hair_color}
           films={character.films}
+          starShips={character.starships}
       />
     )})
   }

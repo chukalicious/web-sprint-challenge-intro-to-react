@@ -24,12 +24,7 @@ const Line = styled.p`
     padding-top: 1rem; 
 `
 
-const Arrow = styled.p`
-    margin: -1rem 0 0 0 ; 
-`
-
 const Character = (props) => {
-
 
     return(
 
@@ -47,9 +42,12 @@ const Character = (props) => {
                         <Films films={film} key={index}/> 
                     )
                 })}
+
+                <h3>Starships</h3>
             </div>
 
         </CharacterCard>
+
     )
 }
 
