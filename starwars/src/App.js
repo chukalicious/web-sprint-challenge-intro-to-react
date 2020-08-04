@@ -13,7 +13,6 @@ const App = () => {
   // sync up with, if any.
 
   const [characters, setCharacters] = useState([]);
-  /* characters.map(title => console.log(title.films)) */
 
   useEffect(() => {
     axios.get("https://swapi.dev/api/people/")
@@ -43,7 +42,6 @@ const App = () => {
       />
     )})
   }
-
     </div>
 )}
 

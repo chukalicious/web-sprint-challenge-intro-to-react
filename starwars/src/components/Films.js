@@ -3,10 +3,6 @@ import styled from "styled-components"
 import { Line } from "./Character"
 import axios from "axios"
 
-const Arrow = styled.p`
-    margin: -1rem 0 0 0 ; 
-`
-
 const FilmsDiv = styled.div`
     display: flex; 
     margin: 1.5rem auto; 
@@ -19,7 +15,6 @@ const FilmsDiv = styled.div`
 `
 
 const Films = (props)=> {
-// console.log(props.films)
 
 const [title, setTitle] = useState(props.films)
 const [episode, setEpisode] = useState(props.films)
@@ -49,9 +44,6 @@ useEffect(() => {
     .catch(err => console.log(err))
 }, [])
 
-
-//props.films is where the urls for the movies are
-    // {console.log(props)}
     return (
         <div>
             <FilmsDiv>
